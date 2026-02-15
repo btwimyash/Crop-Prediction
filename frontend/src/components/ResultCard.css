@@ -1,0 +1,219 @@
+/**
+ * ResultCard CSS Styles
+ */
+
+.result-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  animation: fadeIn 0.5s ease;
+}
+
+.result-section {
+  margin-bottom: 30px;
+}
+
+.result-section:last-child {
+  margin-bottom: 0;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #4caf50;
+  padding-bottom: 10px;
+}
+
+/* Recommendations Grid */
+.recommendations-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.recommendation-item {
+  background: linear-gradient(135deg, #f5fdf5 0%, #e8f5e9 100%);
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #4caf50;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recommendation-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+.rank-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #4caf50;
+  color: white;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.crop-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.confidence-bar {
+  width: 100%;
+  height: 8px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.confidence-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4caf50, #81c784);
+  transition: width 0.5s ease;
+}
+
+.confidence-text {
+  font-size: 12px;
+  color: #666;
+  font-weight: 500;
+}
+
+/* Risk Badge */
+.risk-badge {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.risk-badge.low-risk {
+  background-color: #4caf50;
+  color: white;
+}
+
+.risk-badge.medium-risk {
+  background-color: #ff9800;
+  color: white;
+}
+
+.risk-badge.high-risk {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Weather Grid */
+.weather-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.weather-item {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 3px solid #2196f3;
+  display: flex;
+  flex-direction: column;
+}
+
+.weather-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #666;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.weather-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+}
+
+/* Soil Grid */
+.soil-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.soil-item {
+  background: #f5f5f5;
+  padding: 12px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.soil-item .label {
+  font-weight: 600;
+  color: #555;
+  font-size: 13px;
+}
+
+.soil-item .value {
+  font-weight: 700;
+  color: #4caf50;
+  font-size: 16px;
+}
+
+/* Advisory Message */
+.advisory-message {
+  background: #fffde7;
+  border-left: 4px solid #fbc02d;
+  padding: 15px;
+  border-radius: 6px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.advisory-message p {
+  margin: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .result-card {
+    padding: 20px;
+  }
+
+  .recommendations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .weather-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .soil-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,23 @@
+# Backend Requirements File
+# Install with: pip install -r requirements.txt
+
+# FastAPI & Web Framework
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+pydantic==2.5.0
+pydantic-settings==2.1.0
+python-multipart==0.0.6
+python-dotenv==1.0.0
+
+# Machine Learning & Data Processing
+# torch==2.10.0
+numpy
+pandas
+scikit-learn==1.3.0
+
+# API calls & HTTP
+requests==2.28.2
+httpx==0.23.3
+
+# Utilities
+Pillow==9.4.0

@@ -1,0 +1,15 @@
+# Set default behavior to automatically normalize text files
+* text=auto
+
+# Enforce LF in the repository for common text file types
+*.py text eol=lf
+*.md text eol=lf
+*.html text eol=lf
+*.js text eol=lf
+*.css text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+
+# Treat Jupyter notebooks as binary to avoid noisy diffs
+*.ipynb -text

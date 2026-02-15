@@ -1,0 +1,269 @@
+/**
+ * App CSS Styles
+ */
+
+:root {
+  --primary-color: #4caf50;
+  --primary-dark: #45a049;
+  --secondary-color: #2196f3;
+  --danger-color: #f44336;
+  --warning-color: #ff9800;
+  --success-color: #4caf50;
+  --light-bg: #f9f9f9;
+  --border-color: #ddd;
+  --text-primary: #333;
+  --text-secondary: #666;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  color: var(--text-primary);
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.app-header {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto 30px;
+}
+
+.header-content h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.header-content p {
+  font-size: 18px;
+  opacity: 0.95;
+}
+
+.language-selector {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.lang-btn {
+  padding: 10px 20px;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.lang-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.lang-btn.active {
+  background: white;
+  color: var(--primary-color);
+}
+
+/* Main Content */
+.app-main {
+  flex: 1;
+  padding: 40px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  background: white;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tab-button {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  background: var(--light-bg);
+  color: var(--text-secondary);
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.tab-button:hover {
+  background: #e0e0e0;
+}
+
+.tab-button.active {
+  background: var(--primary-color);
+  color: white;
+}
+
+/* Error Alert */
+.error-alert {
+  background: #ffebee;
+  color: var(--danger-color);
+  padding: 16px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 4px solid var(--danger-color);
+  animation: slideDown 0.3s ease;
+}
+
+.error-alert button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--danger-color);
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Content Area */
+.content-area {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tab-content {
+  flex: 1;
+  min-width: 300px;
+  animation: fadeIn 0.5s ease;
+}
+
+/* Footer */
+.app-footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 40px;
+}
+
+.app-footer p {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-content h1 {
+    font-size: 32px;
+  }
+
+  .header-content p {
+    font-size: 16px;
+  }
+
+  .language-selector {
+    gap: 5px;
+  }
+
+  .lang-btn {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  .app-main {
+    padding: 20px 10px;
+  }
+
+  .tabs {
+    flex-direction: column;
+  }
+
+  .content-area {
+    flex-direction: column;
+  }
+
+  .tab-content {
+    min-width: auto;
+  }
+}
+
+/* Animations */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark);
+}
