@@ -1,3 +1,63 @@
+# Crop Prediction
+
+Description
+-----------
+This is a crop prediction system for farmers from rural areas with multilingual support. It predicts the top 3 crop recommendations and includes a chatbot to guide users.
+
+Features
+--------
+- Predicts top-3 crop recommendations based on location, rainfall, soil and weather data.
+- Multilingual support in the chatbot helper.
+- Lightweight backend API and a React frontend (in `frontend/`).
+
+Recent changes
+--------------
+- Added `.gitignore` to exclude virtual environments, model artifacts, data, and IDE files.
+- Added `.gitattributes` to enforce LF line endings for text files and treat notebooks as binary.
+- Renormalized repository line endings.
+
+Requirements
+------------
+- Python 3.8+ (recommended)
+- Node.js and npm (for the frontend)
+
+Setup (Windows)
+----------------
+1. Create and activate a virtual environment:
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+```
+
+2. Install Python dependencies:
+
+```powershell
+pip install -r requirements.txt
+```
+
+3. Run the backend API:
+
+```powershell
+python backend/main.py
+```
+
+4. (Optional) Start the frontend:
+
+```powershell
+cd frontend
+npm install
+npm start
+```
+
+Project owner / Contact
+-----------------------
+Owner: Yash Gavali
+
+Notes
+-----
+- Large data and model files are intentionally excluded from the repository via `.gitignore`.
+- Jupyter notebooks are treated as binary in `.gitattributes` to avoid noisy diffs.
 # Crop Prediction using Machine Learning
 
 ![crops](crops.jpeg)
